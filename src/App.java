@@ -11,12 +11,13 @@ public class App {
         boolean mayorDeEdad = false;
         mayorDeEdad = edad >= MAYORIA_DE_EDAD;
 
+        /*  
         String nombre = null;
 
         double importe= 123.56;
         char letra= 'A';
         
-
+        */
 
         
         System.out.println("Tengo " + edad + " años ");
