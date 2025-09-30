@@ -1,4 +1,4 @@
-package apuntes;
+package ud1.apuntes;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

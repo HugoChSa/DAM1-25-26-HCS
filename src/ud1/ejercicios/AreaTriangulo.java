@@ -1,4 +1,4 @@
-package ejercicios;
+package ud1.ejercicios;
 
 /**
  * @author Hugo Ch.
