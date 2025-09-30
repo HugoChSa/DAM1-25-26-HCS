@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author Hugo Ch
  */
 
-public class EP0155_Horas {
+public class EP0115_Horas {
     public static void main(String[] args) {
         double segundos, minutos, horas;
         Scanner sc = new Scanner(System.in);
