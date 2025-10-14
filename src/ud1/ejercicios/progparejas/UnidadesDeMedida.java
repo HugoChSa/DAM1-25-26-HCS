@@ -1,8 +1,8 @@
-package ejerciciospractica;
+package ud1.ejercicios.progparejas;
 
 import java.util.Scanner;
 
-public class unidadesDeMedida {
+public class UnidadesDeMedida {
     public static void main(String[] args) {
         double hectarea = 100*100;
         double med_CampoFutbol = 105*70;

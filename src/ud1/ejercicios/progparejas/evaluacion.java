@@ -1,4 +1,4 @@
-package ejerciciospractica;
+package ud1.ejercicios.progparejas;
 
 import java.util.Scanner;
 

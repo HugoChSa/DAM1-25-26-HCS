@@ -1,3 +1,5 @@
+package ud1.ejercicios;
+
 import java.util.Scanner;
 
 public class MayorDeEdad {

@@ -1,8 +1,8 @@
-package ejerciciospractica;
+package ud1.ejercicios.progparejas;
 
 import java.util.Scanner;
 
-public class recetasEIngredientes {
+public class RecetaseIngredientes {
     public static void main(String[] args) {
         double manzana, agua, azucar, limon;
         manzana = 1.5 * 1000.0;

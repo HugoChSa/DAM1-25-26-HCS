@@ -1,9 +1,9 @@
-package ejerciciospractica;
+package ud1.ejercicios.progparejas;
 
 import java.util.Scanner;
 
 public class HorasClaseAsistencia {
-    private final static String asignatura = "Progamacion";
+    //private final static String asignatura = "Progamacion";
     private final static double horasAsignatura = 240.0;
 
     public static void main(String[] args) {
@@ -25,6 +25,7 @@ public class HorasClaseAsistencia {
         String msgPerdidaEvContinua = (numFaltas >= perdidaEvContinua) ? "Has perdido la evaluación continua." : "No has perdido la evaluación continua.";
 
 
+        sc.close();
         System.out.println("\n\t" + msgApercibimiento + "\n\t" + msgPerdidaEvContinua);
 
     }
