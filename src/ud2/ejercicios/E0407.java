@@ -22,6 +22,7 @@ public class E0407 {
         System.out.println(numDivPrimos(1));
         System.out.println();
     }*/
+    
     static boolean esPrimo(int n) {
             if (n <= 1)
                 return false;
@@ -49,6 +50,10 @@ public class E0407 {
 
     public static void main(String[] args) {
         System.out.println(numDivisoresPrimos(7));
+        System.out.println(numDivisoresPrimos(8));
+        System.out.println(numDivisoresPrimos(13));
+        System.out.println(numDivisoresPrimos(50));
+        System.out.println(numDivisoresPrimos(41));
     }
     
 }

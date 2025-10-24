@@ -1,7 +1,7 @@
 package ud2.ejercicios;
 
 public class E0406_Primo {
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         int n;
 
     }
@@ -14,5 +14,5 @@ public class E0406_Primo {
         }
 
 
-    }
+    }*/
 }

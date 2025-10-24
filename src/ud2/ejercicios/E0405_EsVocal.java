@@ -1,8 +1,9 @@
 package ud2.ejercicios;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class E0405_EsVocal {
+    /*
     public static void main(String[] args) {
        
         char vocal[] = {'a', 'e', 'i', 'o', 'u'};
@@ -26,6 +27,6 @@ public class E0405_EsVocal {
 
     }
 
-    
+    */
 
 }
