@@ -1,5 +1,5 @@
 package ud2.practicas;
-
+/* 
 import java.util.Random;
 import java.util.Scanner;
 
@@ -100,7 +100,9 @@ public class CalculadoraHumana {
      * @param max
      * @return
      */
-    static int generarAleatorio(int max){
+
+/*
+     static int generarAleatorio(int max){
     Random rnd = new Random();
         return rnd.nextInt(max -1) + 2;
 
@@ -115,7 +117,7 @@ public class CalculadoraHumana {
 
 
 
-/* 
+
     static void mostrarInstrucciones() {
 
     }
@@ -124,6 +126,7 @@ public class CalculadoraHumana {
     }    
 
     //static mostrarInstrucciones() {}
+
+}
 */
   
-}
