@@ -1,52 +1,50 @@
 package ud2.practicas;
-
-import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EstadisticaEstaturas {
-    public static void main(String[] args) {
     
-        ArrayList<Integer> alturas = new ArrayList<Integer>();
-
+    public static void main(String[] args) {
+        int totalAlumnos = 0, alturaMasAlta = 0, alturaMasBaja = 1000;
+        double mediaAltura = 0;
+        int altura = 0;
+        int sumaAlturas = 0;
         Scanner sc = new Scanner(System.in);
 
-        int altura = 0;
-        int alturasEnTotal = 0;
 
         while (altura >= 0) {
+            try {
 
-            altura = sc.nextInt();
-            if (altura > 0) {
-                alturasEnTotal += altura;
-                alturas.add(altura);
-                
-            } 
-        }
+                System.out.println("Introduce la siguiente altura (en centímetros):");
+                altura = sc.nextInt();
+                if (altura >= 0) {
 
-        int mayor = 0;
-        int menor = 1000;
+                    sumaAlturas += altura; 
 
-        for (int i = 0; i < alturas.size(); i++) {
-            int numActual = alturas.get(i);
-            if (numActual > mayor) {
-                mayor = numActual;
-                
-            }
-            if (numActual < menor) {
-                menor = numActual;
+                if (altura >= alturaMasAlta) {
+                    alturaMasAlta = altura;
+                }
+                if (altura <= alturaMasBaja) {
+                    alturaMasBaja = altura;
+                }
+                totalAlumnos++;
                 
             }
-        }
+        
+            }
+            catch (InputMismatchException error) {
+                System.out.println("El carácter introducido no es numérico.");
+            }
 
-    
-        int totalAlumnos = alturas.size();
-        int media = alturasEnTotal / alturas.size();
-        System.out.println("Total alumnos: " + totalAlumnos);
-        System.out.println("Media altura: " + media + " cm");
-        System.out.println("Altura más alta: " + mayor + " cm");
-        System.out.println("Altura más baja: " + menor + " cm");
+        }
 
         sc.close();
+        
+        mediaAltura  = (double) sumaAlturas / totalAlumnos; 
 
+        System.out.println("El número total de alumnos es: " + totalAlumnos);
+        System.out.println("La media de estatura es: " + mediaAltura);
+        System.out.println("La altura más alta es: " + alturaMasAlta);
+        System.out.println("La altura más baja es: " + alturaMasBaja);
     }
 }

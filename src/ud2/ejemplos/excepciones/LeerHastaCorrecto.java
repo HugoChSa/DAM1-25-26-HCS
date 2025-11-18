@@ -48,7 +48,9 @@ public class LeerHastaCorrecto {
     }
 
     public int leerInt() {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
+        @SuppressWarnings("unused")
         int numerador = 0;  
         int numeroEntero = 0;     
         boolean numeroValido = false;
