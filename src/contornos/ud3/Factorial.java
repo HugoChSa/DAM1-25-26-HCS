@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Factorial {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número enteiro: ");
         int n = sc.nextInt();
         int resultado = 1;
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++ ) {
             resultado = resultado * i;
         }
 

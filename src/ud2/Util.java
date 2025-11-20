@@ -19,6 +19,7 @@ public class Util {
     }
 
     public static int leerIntRecursiva() {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         try {
             return sc.nextInt();
@@ -30,6 +31,7 @@ public class Util {
     }
 
     public static int leerInt() {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         int numeroEntero = 0;
         boolean numeroValido = false;
