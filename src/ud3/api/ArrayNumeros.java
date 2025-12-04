@@ -3,6 +3,7 @@ package ud3.api;
 import java.util.Scanner;
 
 public class ArrayNumeros {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número: ");

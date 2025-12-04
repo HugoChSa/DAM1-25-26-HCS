@@ -1,10 +1,10 @@
 package ud3.api;
 
-import java.util.Scanner;
+
 
 public class FuncionContar {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
         //valorClave = sc.nextInt();
     }
 
