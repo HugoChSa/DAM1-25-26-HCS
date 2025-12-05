@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class E0210_DiasMes {
     public static void main(String[] args) {
         System.out.println("Número de Mes (1-12): ");
-        @SuppressWarnings("resource")
         int mes = new Scanner(System.in).nextInt();
         
         int dias = switch (mes) {

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class MaiorDeTres {
     public static void main(String[] args) {
-        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.print("Número 1: ");
         int a = sc.nextInt();
