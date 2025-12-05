@@ -1,8 +1,5 @@
 package ud3.api;
 
-/**
- * @author Hugo Romay
- */
 
 public class Circulo {
     static double volumenEsfera(double radio) {
