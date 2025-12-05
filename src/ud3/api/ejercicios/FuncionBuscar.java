@@ -1,4 +1,4 @@
-package ud3.api;
+package ud3.api.ejercicios;
 
 public class FuncionBuscar {
     public static void main(String[] args) {

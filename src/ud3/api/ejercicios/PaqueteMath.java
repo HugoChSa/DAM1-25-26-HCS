@@ -1,5 +1,5 @@
 
-package ud3.api;
+package ud3.api.ejercicios;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
