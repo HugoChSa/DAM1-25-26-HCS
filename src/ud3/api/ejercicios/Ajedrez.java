@@ -2,6 +2,8 @@ package ud3.api.ejercicios;
 
 import java.util.Scanner;
 
+import org.junit.Ignore;
+
 public class Ajedrez {
     public static void main(String[] args) {
         char[][] tablero = inicializarTablero();
@@ -10,13 +12,13 @@ public class Ajedrez {
 
         mostrarTableroConLeyenda(tablero);
         System.out.println(turnoBlancas ? "Turno de BLANCAS" : "Turno de NEGRAS");
-        leerMovimiento();
+        int[] mov = leerMovimiento();
         while (!fin) {
             //validarMovimiento
-            //ejecutarMovimiento
+            mover(tablero, mov);
             //comprobarJaqueOJaqueMate
             mostrarTableroConLeyenda(tablero);
-            leerMovimiento();
+            mov = leerMovimiento();
         }
 
         //Mensaje final
@@ -25,16 +27,39 @@ public class Ajedrez {
         
     }
 
-    private static String leerMovimiento() {
+    private static void mover(char[][] tablero, int[] mov) {
+        tablero[mov[2]][mov[3]] = tablero[mov[0]][mov[1]];
+        tablero[mov[0]][mov[1]] = '-';        
+    }
+
+    private static int[] leerMovimiento() {
         Scanner sc = new Scanner(System.in);
         System.out.println();
-        System.out.print("¿Movimiento? Ejemplo \"e2 e4\": ");
+        System.out.print("¿Movimiento? Ejemplo \"e2 e4\" o \"fin\": ");
         String entrada = sc.nextLine();
-        entrada.charAt(0); // columnaOrigen  |  e
-        entrada.charAt(1); // filaOrigen     |  2
-        entrada.charAt(3); // columnaDestino |  e
-        entrada.charAt(4); // filaDestino    |  4
-        return null;
+        if (entrada.equalsIgnoreCase("fin")) {
+            
+        }
+
+
+        char columnaOrigen = entrada.charAt(0); // columnaOrigen  |  e
+        char filaOrigen = entrada.charAt(1); // filaOrigen     |  2
+        char columnaDestino = entrada.charAt(3); // columnaDestino |  e
+        char filaDestino = entrada.charAt(4); // filaDestino    |  4
+       
+        System.out.println(columnaOrigen - 'a'); // 4
+        System.out.println(7 - (filaOrigen - '1')); // 6
+        
+        System.out.println(columnaDestino - 'a'); // 4
+        System.out.println(7 - (filaDestino - '1')); // 4
+
+        int[] movimiento = {
+            columnaOrigen - 'a',
+            7 - (filaOrigen - '1'),
+            columnaDestino - 'a',
+            7 - (filaDestino - '1')          
+        };
+        return movimiento;
     }
 
 
