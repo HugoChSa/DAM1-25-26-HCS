@@ -2,7 +2,6 @@ package ud3.api.ejercicios;
 
 import java.util.Scanner;
 
-import org.junit.Ignore;
 
 public class Ajedrez {
     public static void main(String[] args) {

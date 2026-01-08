@@ -1,4 +1,4 @@
-package ud3.api.practicas;
+package ud3.api.ejercicios.practicas;
 
 import java.util.Arrays;
 
