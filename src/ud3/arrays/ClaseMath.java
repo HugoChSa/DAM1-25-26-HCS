@@ -1,4 +1,4 @@
-package ud3.api.ejercicios;
+package ud3.arrays;
 
 public class ClaseMath {
     static double random(double min, double max) {

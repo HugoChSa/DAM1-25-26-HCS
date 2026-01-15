@@ -1,4 +1,4 @@
-package ud3.api.ejercicios;
+package ud3.arrays;
 
 import java.util.Scanner;
 
