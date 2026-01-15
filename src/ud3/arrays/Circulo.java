@@ -2,7 +2,7 @@ package ud3.arrays;
 
 
 public class Circulo {
-    static double volumenEsfera(double radio) {
+    public static double volumenEsfera(double radio) {
         return 4.0 / 3 * Math.PI * Math.pow(radio, 3);
     }
 

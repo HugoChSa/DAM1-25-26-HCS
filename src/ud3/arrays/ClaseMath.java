@@ -1,7 +1,7 @@
 package ud3.arrays;
 
 public class ClaseMath {
-    static double random(double min, double max) {
+    public static double random(double min, double max) {
 /*        double f = Math.random()/Math.nextDown(1.0);
         double x = min*(1.0 - f) + max*f;
         return x;*/
