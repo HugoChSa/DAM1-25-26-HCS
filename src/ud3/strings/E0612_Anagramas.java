@@ -44,4 +44,5 @@ public class E0612_Anagramas {
         return Arrays.equals(letraPalabra1, letraPalabra2);
 
     }
+    
 }
