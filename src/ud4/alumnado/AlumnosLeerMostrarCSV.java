@@ -8,7 +8,7 @@ import ud3.strings.Util;
 public class AlumnosLeerMostrarCSV {
     public static void main(String[] args) {
 
-        String[] alumnosCSV = Util.readFileToStringArray("alumnos.csv");
+        String[] alumnosCSV = Util.readFileToStringArrays();
 
         Alumno[] alumnos = new Alumno[alumnosCSV.length];
 
