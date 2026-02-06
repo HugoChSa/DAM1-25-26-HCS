@@ -23,7 +23,7 @@ public class AlumnosLeerMostrarCSV {
             alumnos[i].notaContornos = Double.parseDouble(atributos[5]);
         }
 
-
+        
         Alumno.setCentroEducativo("");
 
         System.out.println("\n\nLISTADO DE ALUMNOS del " + Alumno.getCentroEducativo());

@@ -1,4 +1,4 @@
-@startuml
+@startuml Modelo_Alumno
 class Alumno {
     String nombre
     String apellido1
