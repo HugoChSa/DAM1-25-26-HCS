@@ -1,47 +1,37 @@
 package ud4.clases;
 
-import java.util.Scanner;
-
 public class CuentaCorriente {
-    
-    // Atributos
+    String dni;
+    String nombreTitular;
+    double saldo;
 
-
-    public class Cuenta {
-
-        String DNI;
-        String nombre;
-        String apellido1, apellido2;
-        int saldo;
+    // Constructores
+    CuentaCorriente(String dni, String nombre) {
+        this.dni = dni;
+        this.nombreTitular = nombre;
+        saldo = 0;
     }
 
-    Cuenta cuenta = null;
+    public boolean sacarDinero(double importe) {
+        if (importe <= this.saldo) {
+            // saco dinero
+            saldo -= importe;
+            return true;
+        } else {
+            // No hay saldo
+            return false;
+        }
+    }
 
-    // Métodos
-    
-    public Cuenta crearCuenta() {
-        Cuenta cuenta = new Cuenta();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("DNI: ");
-        cuenta.DNI = sc.nextLine();
-        
-        System.out.print("Nombre: ");
-        cuenta.nombre = sc.nextLine();
-        System.out.print("Apellido 1: ");
-        cuenta.apellido1 =sc.nextLine();
-        System.out.print("Apellido 2: ");
-        cuenta.apellido2 = sc.nextLine();
-        cuenta.saldo = 0;
-        System.out.println("Saldo = " + cuenta.saldo);
-        
+    public void ingresarDinero(double importe) {
+        saldo += importe;
+    }
 
-        return cuenta;
+    public void mostrar() {
+        System.out.println("CUENTA CORRIENTE");
+        System.out.println("================");
+        System.out.println("Titular: " + nombreTitular + " (" + dni + ")");
+        System.out.println("Saldo = " + saldo + " euros)");
     }
 
 }
-
-    /*
-        System.out.println("DNI: ");
-        System.out.println("Nombre del titular: ");
-        System.out.println("Saldo = ");
-    */
