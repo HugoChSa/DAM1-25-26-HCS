@@ -1,45 +1,27 @@
-package ud4.clases;
+package ud4.carpeta.clases;
 
 public class Persona {
     // Atributos
-    protected String nombre;
-    protected byte edad;
-    protected double estatura;
+    String nombre;
+    byte edad;
+    double estatura;
     // final String dni;
 
     // Métodos
-
-    public void mostrarDatos() {
-        System.out.println("- " + nombre);
-        System.out.println("- " + edad);
-        System.out.println("- " + estatura);
-    }
-
-    public void saludar() {
+    void saludar() {
         System.out.println("Hola, me llamo " + nombre);
     }
 
-    public void cumplirAños() {
+    void cumplirAños() {
         edad++;
     }
 
-    protected void crecer(double incremento) {
+    void crecer(double incremento) {
         estatura += incremento;
     }
 
-
-    
-    @Override
-    public String toString() {
-        return nombre + " (" + edad + ")";
-    }
-
-
-
-
-
     // constructor sobrecargado: solo asigna el nombre
-    public Persona(String nombre) {
+    Persona(String nombre) {
         this(nombre, 0, 0);
     }
 
@@ -51,7 +33,7 @@ public class Persona {
         this.estatura = estatura;
     }
 
-    public Persona() {
+    Persona() {
         edad = 18;
         estatura = 1.7;
     }

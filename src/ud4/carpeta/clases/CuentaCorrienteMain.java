@@ -1,21 +1,7 @@
-package ud4.clases;
+package ud4.carpeta.clases;
 
 public class CuentaCorrienteMain {
     public static void main(String[] args) {
-
-
-        CuentaCorriente cc = new CuentaCorriente("11111111A", "Paco", 200);
-
-        cc.mostrar();
-
-        cc.setGestor(new Gestor("Ana", "666666666"));
-
-        cc.mostrar();
-
-
-        cc.setNombreTitular("Paquete");
-        cc.setDni("88888888D");
-        // cc.saldo = 5000;
 
         CuentaCorriente cc1 = new CuentaCorriente("55555555X", "Pepe");
 

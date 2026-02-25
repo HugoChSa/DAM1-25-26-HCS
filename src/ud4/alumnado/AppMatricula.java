@@ -3,18 +3,18 @@ package ud4.alumnado;
 
 public class AppMatricula {
     public static void main(String[] args) {
+        // Carga datos en arrays de módulos y alumnos desde ficheros CSV
         Modulo[] modulos = Modulo.cargarFichero("DATOS - Módulos.csv");
+        Alumno[] alumnos = Alumno.cargarFichero("DATOS - Alumnos.csv");
 
-        System.out.println(modulos[0].mostrar());
-
-        Alumno alumno = new Alumno("Pepe", "A", "B");
-        System.out.println(alumno.mostrar());
-
-        modulos[0].matricula(alumno);
-
-        System.out.println(modulos[0].mostrar());
-
-        System.out.println(alumno.mostrar());
-
+        // @TODO Muestra repetidamente un menú de opciones mientras no se seleccione Salir.
+        System.out.println("MENÚ");
+        // Listar Módulos
+        // Listar Alumnado
+        // Matricular 
+        // Desmatricular
+        // Mostrar Módulo
+        // Mostrar Alumno
+        // Crear Alumno Nuevo
     }
 }
