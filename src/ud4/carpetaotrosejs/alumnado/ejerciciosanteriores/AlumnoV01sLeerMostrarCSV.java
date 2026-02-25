@@ -1,4 +1,4 @@
-package ud4.carpeta.alumnado.ejerciciosanteriores;
+package ud4.carpetaotrosejs.alumnado.ejerciciosanteriores;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

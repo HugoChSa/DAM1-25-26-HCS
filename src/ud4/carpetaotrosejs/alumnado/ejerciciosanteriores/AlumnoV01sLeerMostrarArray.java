@@ -1,4 +1,4 @@
-package ud4.carpeta.alumnado.ejerciciosanteriores;
+package ud4.carpetaotrosejs.alumnado.ejerciciosanteriores;
 
 public class AlumnoV01sLeerMostrarArray {
     public static void main(String[] args) {

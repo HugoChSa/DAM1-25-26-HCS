@@ -4,7 +4,9 @@ package ud4.alumnado;
 public class AppMatricula {
     public static void main(String[] args) {
         // Carga datos en arrays de módulos y alumnos desde ficheros CSV
+        @SuppressWarnings("unused")
         Modulo[] modulos = Modulo.cargarFichero("DATOS - Módulos.csv");
+        @SuppressWarnings("unused")
         Alumno[] alumnos = Alumno.cargarFichero("DATOS - Alumnos.csv");
 
         // @TODO Muestra repetidamente un menú de opciones mientras no se seleccione Salir.

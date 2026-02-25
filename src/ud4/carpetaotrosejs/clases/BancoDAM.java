@@ -1,4 +1,4 @@
-package ud4.carpeta.clases;
+package ud4.carpetaotrosejs.clases;
 
 import java.util.Arrays;
 import java.util.Scanner;

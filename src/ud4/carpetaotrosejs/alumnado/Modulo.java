@@ -1,4 +1,4 @@
-package ud4.carpeta.alumnado;
+package ud4.carpetaotrosejs.alumnado;
 
 import java.util.Arrays;
 

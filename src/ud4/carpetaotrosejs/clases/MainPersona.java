@@ -1,4 +1,4 @@
-package ud4.carpeta.clases;
+package ud4.carpetaotrosejs.clases;
 
 public class MainPersona {
     public static void main(String[] args) {
