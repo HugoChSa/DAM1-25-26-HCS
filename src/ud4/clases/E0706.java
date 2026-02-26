@@ -2,6 +2,7 @@ package ud4.clases;
 
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class E0706 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
