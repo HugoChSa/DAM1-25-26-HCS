@@ -1,6 +1,7 @@
 package ud4.interfaces.animales;
 
 public class AppAnimales {
+    @SuppressWarnings({ "unused", "static-access" })
     public static void main(String[] args) {
         Perro p = new Perro();
         p.voz();

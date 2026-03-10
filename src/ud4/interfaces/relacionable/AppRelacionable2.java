@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class AppRelacionable2 {
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public static void main(String[] args) {
 
         Linea l1 = new Linea(2, 2, 4, 1);

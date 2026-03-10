@@ -3,6 +3,7 @@ package ud4.interfaces.relacionable;
 import java.util.ArrayList;
 
 public class AppRelacionable3 {
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public static void main(String[] args) {
         ArrayList<Relacionable> array = new ArrayList();
         array.add(new Linea(15, 3, 9, 5));
