@@ -3,6 +3,8 @@ package ud4.rol;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import ud4.interfaces.Socio;
+
 public class AppCombateGrupos {
     public static void main(String[] args) {
         
@@ -18,6 +20,7 @@ public class AppCombateGrupos {
                 return o1.getPv() - o2.getPv();
             }
         };
+        
 
         Arrays.sort(equipoA, comparadorPV.reversed());
 
@@ -25,7 +28,7 @@ public class AppCombateGrupos {
             System.out.println(personaje);
         }
 
-        Personaje[]equipoB = {
+        Personaje[] equipoB = {
             new Personaje("B-1"),
             new Personaje("B-2"),
             new Personaje("B-3"),
@@ -37,15 +40,14 @@ public class AppCombateGrupos {
             System.out.println(personaje);
         }
 
-        Comparator<Personaje> compardorAgilidad = new Comparator<>() {
+        Comparator<Personaje> comparadorAgilidad = new Comparator<>() {
             @Override
             public int compare(Personaje o1, Personaje o2) {
-                
-                
+                return o1.getAgilidad() - o2.getAgilidad();
             }
-        };
+        }; 
+
 
         
-
     }
 }

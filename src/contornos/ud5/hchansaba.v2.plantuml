@@ -1,0 +1,59 @@
+@startuml
+class Persoa <<entity>> {
+    -String dni
+    -String nome
+    -LocalDate dataNacemento
+}
+
+class Xogador <<entity>> {
+    -int dorsal
+    -String posicion
+    +boolean PerteneceEquipo()
+}
+
+
+class Arbitro <<entity>> {
+    -int numColexiado
+    -int anhosExp
+    +boolean Pitar()
+    
+}
+
+class Equipo <<entity>> {
+    -String nome
+    -String corCamiseta
+    -int puntuacionTotal
+    +boolean cambiarPorSuplente()
+}
+
+class Partido <<entity>> {
+    -LocalDate data
+    -int hora
+    -int pista
+    -int restultadoFinal
+    +int sumarPuntuacion()
+}
+
+class FormularioInscricion <<boundary>> {
+    +String MostrarFormulario()
+    +String capturarDatosEquipo()
+}
+
+class XestorCampionato <<control>> {
+    +boolean validarInscricion()
+    +void xerarCalendario()
+}
+
+Persoa "1" <-- "0..1" Xogador
+
+Persoa "1" <-- "0..1" Arbitro
+
+Equipo "1" *-- "3..4" Xogador
+
+Partido "1" *-- "2" Equipo
+
+FormularioInscricion <|-- Xogador
+
+XestorCampionato <|-- Partido
+
+@enduml
