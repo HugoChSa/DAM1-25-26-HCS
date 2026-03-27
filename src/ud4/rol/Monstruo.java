@@ -77,7 +77,6 @@ public abstract class Monstruo implements Comparable<Monstruo> {
         return defensa - o.defensa;
     }
 
-    @SuppressWarnings("unused")
     public static void main(String[] args) {
         // Monstruo m = new Monstruo();
         //System.out.println(m);

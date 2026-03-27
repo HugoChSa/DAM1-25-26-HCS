@@ -3,9 +3,7 @@ package ud4.rol;
 import java.util.Arrays;
 import java.util.Comparator;
 
-
 public class AppCombateGrupos {
-    @SuppressWarnings("unused")
     public static void main(String[] args) {
         
         // Tu equipo
@@ -35,14 +33,7 @@ public class AppCombateGrupos {
         - El juego termina cuando todos los personajes de un equipo han muerto
          */
 
-        // COMPARADORES
-        Comparator<Personaje> comparadorPV = new Comparator<>() {
-            @Override
-            public int compare(Personaje o1, Personaje o2) {
-                return o1.getPv() - o2.getPv();
-            }
-        };                
-
+        // COMPARADORES            
         Comparator<Personaje> comparadorAgilidadDesc = new Comparator<>() {
             @Override
             public int compare(Personaje o1, Personaje o2) {
@@ -54,10 +45,10 @@ public class AppCombateGrupos {
         // Metemos a todos los personajes en un único array y lo ordenamos descendentemente por agilidad
         Personaje[] todos = new Personaje[equipoA.length + equipoB.length];
         for (int i = 0; i < todos.length; i++) {
-            if (i < 3) 
+            if (i < equipoA.length) 
                 todos[i] = equipoA[i];
             else
-                todos[i] = equipoB[i-3];
+                todos[i] = equipoB[i-equipoA.length];
         }
        
         Arrays.sort(todos, comparadorAgilidadDesc);
@@ -72,54 +63,50 @@ public class AppCombateGrupos {
             // Si está vivo
             Personaje pConTurno = todos[turno];
             if (pConTurno.estaVivo()) {
-                System.out.println(pConTurno + " ataca ");
                 // Comprobamos en qué equipo está
-                
-                if (pertenece(pConTurno, equipoA)){                    
-                    //Personaje personajeMenosPV = ;
+                if (pertenece(pConTurno, equipoA))
                     // Ataca al equipoB
-                    // Ataca al personaje vivo del otro equipo con menos puntos de vida
-                    // En el futuro se puede establecer otra estrategia  
-                    System.out.println("al EquipoB");
-                   //    ejecutarAtaque(pConTurno, todos[turno]);
-                }
-              
-                else {
+                    atacar(pConTurno, equipoB);        
+                else
                     // Ataca al equipoA
-                    System.out.println("al EquipoA");
-                    
-                }
-                   
+                    atacar(pConTurno, equipoA);
             }
-
             // Pasamos el turno al siguiente
             turno = (turno + 1) % todos.length;
         }
 
         // 3. Muestra equipo Ganador
-        if (alguienVive(equipoA)) {
+        if (alguienVive(equipoA))
             System.out.println("Ganador el equipo A");
-        }
-        else {
-
+        else        
             System.out.println("Ganador el equipo B");
-        }    
-            
     }
 
-    
-/* 
-    private static void ejecutarAtaque(Personaje atacante, Personaje defensor) {
-        int danho = atacante.atacar(defensor);
-        
-        if (danho > 0) {
-            System.out.println(atacante.getNombre() + " golpea a " + defensor.getNombre());
-            System.out.println(defensor + " pierde " + danho + " pv");
-        } else 
-            System.out.println(defensor.getNombre() + " esquiva el ataque.");
-        System.out.println();
+    private static void atacar(Personaje pConTurno, Personaje[] equipo) {
+        // Ataca al personaje vivo del otro equipo con menos puntos de vida
+        // En el futuro se puede establecer otra estrategia                
+        Comparator<Personaje> comparadorPV = new Comparator<>() {
+            @Override
+            public int compare(Personaje o1, Personaje o2) {
+                return o1.getPv() - o2.getPv();
+            }
+        };  
+        Arrays.sort(equipo, comparadorPV);
+        for (Personaje pAtacado : equipo) {
+            if (pAtacado.estaVivo()) {
+                int danho = pConTurno.atacar(pAtacado);
+                if (danho > 0) {
+                    System.out.println(pConTurno + " ataca a " + pAtacado + " y le quita " + danho + " PV");
+                    if (!pAtacado.estaVivo()) 
+                        System.out.println(pConTurno.getNombre() + " MATA A " + pAtacado.getNombre() + "!!!!!!!!!");
+                } else {
+                    System.out.println(pAtacado + " esquiva el ataque de " + pConTurno);
+                }
+                return;
+            }
+        }
     }
-*/
+
     private static boolean pertenece(Personaje p, Personaje[] equipo) {
         for (Personaje personaje : equipo)
             if (p.equals(personaje))
@@ -136,7 +123,7 @@ public class AppCombateGrupos {
 
     private static void imprimirEquipo(Personaje[] equipo) {
         for (Personaje personaje : equipo) {
-            personaje.mostrar();
+            System.out.println(personaje.mostrar());
         }
     }
 }

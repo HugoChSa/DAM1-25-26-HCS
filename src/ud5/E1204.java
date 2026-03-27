@@ -16,14 +16,13 @@ public class E1204<Numero> {
     List<Numero> listaNums = new ArrayList<>();
 
     Collection<Numero> coleccionNums = listaNums;
-
-    boolean add(Numero numero) {
+/*    boolean add(Numero numero) {
         if ( == -1) {
             
         }
         return false;
         
-    }
+    }*/
 }
 
 
