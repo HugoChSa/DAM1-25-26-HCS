@@ -19,6 +19,7 @@ class Contenedor<T> {
         return res;
     }    
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         Contenedor<Integer> cInt = new Contenedor<>();
         cInt.guardar(7);
@@ -30,10 +31,12 @@ class Contenedor<T> {
 
         Contenedor contenedor = new Contenedor();
         contenedor.guardar("Hola");
+        @SuppressWarnings("unused")
         Double d = (Double) contenedor.extraer(); // Error de ejecución
 
         //Double x = (Double) c.extraer(); // error de ejecución
 
+        @SuppressWarnings("unused")
         Contenedor<?> c; 
         c = cInt;
         c = cStr;

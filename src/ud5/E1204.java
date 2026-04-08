@@ -3,7 +3,7 @@ package ud5;
 import java.util.Collection;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class E1204<Numero> {
     int numero;
