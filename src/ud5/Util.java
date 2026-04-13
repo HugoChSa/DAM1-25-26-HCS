@@ -106,4 +106,9 @@ public class Util {
 
     }
 
+    public static String[] readFileToStringArray(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'readFileToStringArray'");
+    }
+
 }

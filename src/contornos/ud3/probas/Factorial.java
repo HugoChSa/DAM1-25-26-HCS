@@ -1,5 +1,4 @@
-package contornos.ud3;
-
+package contornos.ud3.probas;
 import java.util.Scanner;
 
 public class Factorial {
@@ -9,11 +8,10 @@ public class Factorial {
         int n = sc.nextInt();
         int resultado = 1;
 
-        for (int i = 1; i <= n; i++ ) {
+        for (int i = 1; i <= n; i++) {
             resultado = resultado * i;
         }
 
         System.out.println("O factorial de " + n + " é " + resultado);
     }
 }
-
