@@ -1,4 +1,6 @@
-public class App {
+package ud1.ejercicios;
+
+public class EjercicioAPP {
     public static void main(String[] args) throws Exception {
         final int MAYORIA_DE_EDAD = 18;
 
@@ -26,3 +28,4 @@ public class App {
         System.out.println("¿Soy mayor de edad? " + mayorDeEdad);
     }
 }
+
